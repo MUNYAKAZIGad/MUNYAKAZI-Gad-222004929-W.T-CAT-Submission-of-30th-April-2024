@@ -1,0 +1,101 @@
+<html>
+    <header>
+        <title>Sign Up</title>
+        <link rel="stylesheet" href="styles.css">            
+        <style>
+        .Block{
+            float: left;
+            display: inline-block;
+        }
+        #Block1-mb{
+            width: 87%;
+        }
+        #Block2-mb{
+            width: 10%;
+        }
+        #Block1-mb ol li{
+            text-decoration: none;
+            float: left;
+            display: inline-block;
+            margin-left: 5%;
+            margin-top: 20px;
+            font-size: 30px;
+        }
+        #Block2-mb ol li{
+            text-decoration: none;
+            float: left;
+            display: inline-block;
+            margin-left: 5%;
+            margin-top: 20px;
+            font-size: 30px;
+        }
+        #Block1-mb ol li a{
+            text-decoration: none;
+            color: black;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        #Block2-mb ol li a{
+            text-decoration: none;
+            color: black;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .Block #ribbon1 a:hover{
+             color: aqua;
+         }
+        #Block2-mb a:hover{
+            color: aqua;   
+        }
+    </style>
+</header>
+<body>
+<!-- Developed and Designed by MUNYAKAZI Gad with 222004929 Reg number-->
+    <!--Home Ribbon on the website of the system-->
+    <div class="Block" id="Block1-mb">
+        <ol id="ribbon1">
+            <li><a href=".\index.html">Home</a></li>
+            <li><a href=".\About.html">About</a></li>
+            <li><a href=".\Services.html">Services</a></li>
+            <li><a href=".\Form.html">Register</a></li>
+            <li><a href=".\My book.html">My Book</a></li>
+        </ol>
+    </div>
+    <div class="Block" id="Block2-mb">
+        <ol>
+            <li><a href=".\Form.html">Login</a></li>
+        </ol>
+    </div></br></br></br></br>
+            <center>
+                <div class="wrapper">
+                    <form action="register.php" method="POST" enctype="">
+                        <h1>Sign Up</h1>
+                        <div class="input-box"><input type="text" placeholder="First Name" class="form-control" id="firstName" name="firstName" oninput="updateUsername()" required><i class='bx bxs-user'></i></div>
+                        <div class="input-box"><input type="text" placeholder="Last Name" class="form-control" id="lastName" name="lastName" oninput="updateUsername()" required><i class='bx bxs-user'></i></div>
+                        <div class="input-box"><input type="text" placeholder="Username" class="form-control" id="username" name="username" readonly required><i class='bx bxs-user'></i></div>
+                        <div class="input-box"><input type="email" placeholder="Email Address" class="form-control" id="email" aria-describedby="emailHelp" name="email" required><i class='bx bxs-user'></i></div>
+                        <div class="input-box"><input type="text" placeholder="Telephone" class="form-control" id="telephone" name="telephone"><i class='bx bxs-user'></i></div>
+                        <div class="input-box"><input type="password" placeholder="Password"  class="form-control" id="password" name="password" required><i class='bx bxs-lock-alt' ></i></div>
+                        <div class="remember-forgot"><label><input type="checkbox">Remember Me</label><a href="#">Forgot Password</a></div>
+                        <button type="submit" class="btn" name="subject" value="Login">Register</button>
+                        <div class="register-link"><p>Already have an account? <a href=".\Form.html">Login</a></p></div>
+                    </form>
+                </div>
+            </center>
+    <script>
+        function updateUsername() {
+            var firstName = document.getElementById('firstName').value;
+            var lastName = document.getElementById('lastName').value;
+            var usernameField = document.getElementById('username');
+            if (firstName && lastName) {
+                var firstLetter = firstName.charAt(0).toLowerCase();
+                var username = firstLetter + lastName.toLowerCase();
+                usernameField.value = username;
+            } else {
+                usernameField.value = '';
+            }
+        }
+    </script>
+    </body>
+    <footer style="margin-top: 230px;">
+        <div id="foot">Copyright © 2024 CTS All Right Reserved</div>
+    </footer>
+</html>
